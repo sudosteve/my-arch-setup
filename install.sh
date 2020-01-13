@@ -6,11 +6,10 @@ source params.sh
 
 mount $ROOT /mnt
 swapon $SWAP
-mkdir /mnt/boot/EFI
-mount $EFI /mnt/boot/EFI
 
 pacstrap /mnt base base-devel linux linux-firmware
 
+mount $EFI /mnt/boot
 genfstab -U /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
