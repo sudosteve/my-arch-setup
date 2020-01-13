@@ -16,6 +16,13 @@ passwd
 pacman --noconfirm --needed -S networkmanager dhcpcd
 systemctl enable NetworkManager
 
+pacman --noconfirm --needed -S zsh
+useradd -m -G wheel -s /bin/zsh $USER
+passwd $USER
+
+pacman -S sudo
+visudo
+
 pacman --noconfirm --needed -S grub os-prober
 grub-install $DRIVE
 

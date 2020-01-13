@@ -7,9 +7,10 @@ source params.sh
 mount $ROOT /mnt
 swapon $SWAP
 
-# pacstrap /mnt base base-devel linux linux-firmware
+pacstrap /mnt base base-devel linux linux-firmware vim
 
-mount $EFI /mnt/boot
+mkdir /mnt/boot/EFI
+mount $EFI /mnt/boot/EFI
 genfstab -U /mnt >> /mnt/etc/fstab
 
 cp chroot_install.sh /mnt/install.sh
