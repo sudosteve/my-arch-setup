@@ -14,11 +14,12 @@ echo "127.0.1.1       $HOSTNAME.localdomain $HOSTNAME" >> /etc/hosts
 echo "Set root password"
 passwd
 
+# Network Manager
 pacman --noconfirm --needed -S networkmanager dhcpcd
 systemctl enable NetworkManager
 systemctl enable dhcpcd
 
-# add user
+# add user with zsh
 pacman --noconfirm --needed -S zsh
 useradd -m -G wheel -s /bin/zsh $USER
 echo "Set password for user $USER"
@@ -30,8 +31,10 @@ visudo
 pacman --noconfirm --needed -S xf86-video-intel bumblebee nvidia bbswitch
 systemctl enable bumblebeed.service
 
+# install grub bootloader
 pacman --noconfirm --needed -S grub os-prober
 grub-install $DRIVE
+grub-mkconfig -o /boot/grub/grub.cfg
 
 exit
 umount -a
