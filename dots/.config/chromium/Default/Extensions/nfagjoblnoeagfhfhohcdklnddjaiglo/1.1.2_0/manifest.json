@@ -1,0 +1,21 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "https://www.tomorrow.do/"
+      },
+      "urls": [ "https://www.tomorrow.do/" ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "img/chrome_icon-128x128.png",
+      "16": "img/chrome_icon-16x16.png",
+      "48": "img/chrome_icon-48x48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDTriF4YhReBhntpI1VdCq7f8I0MQHkglI1CEAnSJtLZJ61m5UN3e4b+lpL8M9thuk1AR3nwJGsHuL3qYz3/tvz8jy3/vhiICQ9SREyKZPTBmQmf8ESAzSVl6uOizm6H532FDvKAVdvd9OTygr79CQ0AfEsI/mllR6ohp7uaOrJWwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "unlimitedStorage", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.2"
+}

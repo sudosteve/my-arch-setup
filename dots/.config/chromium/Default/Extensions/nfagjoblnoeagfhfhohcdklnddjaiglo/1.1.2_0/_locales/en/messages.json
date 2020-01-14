@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "The todo App for procrastinators ;)"
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "Do It (Tomorrow)"
+   }
+}

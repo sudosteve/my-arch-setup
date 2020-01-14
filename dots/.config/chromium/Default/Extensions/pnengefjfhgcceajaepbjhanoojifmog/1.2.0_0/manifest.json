@@ -1,0 +1,22 @@
+{
+   "app": {
+      "launch": {
+         "height": 750,
+         "web_url": "https://writer.bighugelabs.com/?chrome=1",
+         "width": 900
+      },
+      "urls": [ "https://writer.bighugelabs.com/" ]
+   },
+   "description": "The internet typewriter",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD2mseNS/b6mRw5+rBomU+o8dvtkq0aJwcfym4nUcHFbokxBtKnOyS2Lp9rjG4fbELCYFaJhsCN4XlTrkbYyTbuZuf6ZhgRwdwuL52Ddg1fCp90kg/o55L2R0iq0hhSnJPY06VL6fNNBcZ54pW39qTBLej2FUlSnpM54/vkCL1GqQIDAQAB",
+   "manifest_version": 2,
+   "name": "Writer",
+   "offline_enabled": true,
+   "permissions": [  ],
+   "short_name": "Writer",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.0"
+}

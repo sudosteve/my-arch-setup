@@ -1,0 +1,6 @@
+2020/01/14-21:34:16.476 5cf Reusing MANIFEST /home/steve/.config/chromium/Default/Sync Data/LevelDB/MANIFEST-000001
+2020/01/14-21:34:16.476 5cf Recovering log #11
+2020/01/14-21:34:16.477 5cf Reusing old log /home/steve/.config/chromium/Default/Sync Data/LevelDB/000011.log 
+2020/01/14-22:15:48.593 939 Level-0 table #15: started
+2020/01/14-22:15:48.606 939 Level-0 table #15: 138400 bytes OK
+2020/01/14-22:15:48.610 939 Delete type=0 #11

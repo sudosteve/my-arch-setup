@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Aimez-vous procrastiner? Pourquoi faire aujourdhui ce que l'on peut faire demain? C'est l'esprit de Do It (Tomorrow)!"
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "Do It (Tomorrow)"
+   }
+}
