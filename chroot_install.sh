@@ -1,8 +1,8 @@
 #!/bin/bash
 
-ln -sf /usr/share/zoneinfo/$TZ /etc/localtime
+ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 hwclock --systohc
-vim /etc/locale.gen
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
@@ -15,9 +15,11 @@ echo "Set root password"
 passwd
 
 # Network Manager
-pacman --noconfirm --needed -S networkmanager dhcpcd
+pacman --noconfirm --needed -S networkmanager
+# Try without dhcpcd because I'm still not sure what arch installs by default
+# pacman --noconfirm --needed -S networkmanager dhcpcd
 systemctl enable NetworkManager
-systemctl enable dhcpcd
+# systemctl enable dhcpcd
 
 # add user with zsh
 pacman --noconfirm --needed -S zsh

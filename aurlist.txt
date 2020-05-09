@@ -1,0 +1,13 @@
+betterlockscreen
+brave-bin
+colorz
+j4-dmenu-desktop
+optimus-manager
+python-colorthief
+python-haishoku
+pywal-git
+sc-im
+simple-mtpfs-git
+spotify
+task-spooler
+yay
