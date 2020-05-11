@@ -7,7 +7,6 @@ chromium
 cronie
 dialog
 discord
-dmenu
 dunst
 exfat-utils
 feh
@@ -60,11 +59,11 @@ xorg-xbacklight
 xorg-xdpyinfo
 xorg-xinit
 xorg-xinput
-xorg-setroot
+xorg-xsetroot
 xorg-xwininfo
 xprintidle
 xwallpaper
 youtube-dl
 zathura
 zathura-pdf-mupdf
-zsh-syntax-hightlighting
+zsh-syntax-highlighting

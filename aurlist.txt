@@ -1,6 +1,7 @@
 betterlockscreen
 brave-bin
 colorz
+dmenu-git
 j4-dmenu-desktop
 optimus-manager
 python-colorthief
