@@ -19,6 +19,7 @@ gvim
 htop
 i3-gaps
 i3blocks
+ipython
 network-manager-applet
 maim
 man-db
