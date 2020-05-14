@@ -31,6 +31,8 @@ EFI=$(getpart "efi partition" "Choose efi system partition" "EFI")
 mount $ROOT /mnt
 swapon $SWAP
 
+# add mkfs and mkswap
+
 pacstrap /mnt base base-devel linux linux-firmware vim
 
 mkdir /mnt/boot/efi
