@@ -6,6 +6,7 @@ DISKS="$(lsblk -rpo "name,size,type,mountpoint" | awk '$3=="disk"{printf "%s (%s
 
 # Pick a disk for installation
 DISK="$(dialog --stdout --title "Choose for installation" --menu "Select which disk you would like to use for the installation" 10 70 4 $(echo $DISKS))"
+echo $DISK > disk.tmp
 
 # Ask if we want to partition a disk
 dialog --defaultno --title "Partion disk?" --yesno "Would you like to open fdisk to partition the disk" 8 50 && ( clear ; fdisk $DISK )
@@ -45,9 +46,11 @@ genfstab -U /mnt >> /mnt/etc/fstab
 wget https://raw.githubusercontent.com/sk8ersteve/my-arch-setup/master/chroot_install.sh
 chmod +x chroot_install.sh
 cp chroot_install.sh /mnt/install.sh
+read -p "About to enter chroot.\nPress enter to continue"
 arch-chroot /mnt ./install.sh
 rm /mnt/install.sh
 
 umount -a
+read -p "Press enter to reboot"
 reboot
 

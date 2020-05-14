@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pacman --noconfirm --needed -S dialog
+
 # Prompt user for hostname, username
 HOSTNAME=$(dialog --stdout --inputbox "Enter your hostname" 10 50 --stdout)
 USERNAME=$(dialog --stdout --inputbox "Enter your username" 10 50 --stdout)
@@ -41,6 +43,7 @@ echo "%wheel ALL=(ALL) ALL
 pacman --noconfirm --needed -S xf86-video-intel nvidia bbswitch
 
 # install grub bootloader
+DISK=$(cat disk.tmp)
 pacman --noconfirm --needed -S grub os-prober efibootmgr
 grub-install $DISK
 grub-mkconfig -o /boot/grub/grub.cfg
