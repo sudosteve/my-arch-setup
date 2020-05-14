@@ -27,11 +27,14 @@ SWAP=$(getpart "Swap partition" "Choose swap partition" "swap")
 EFI=$(getpart "efi partition" "Choose efi system partition" "EFI")
 [ -z $EFI ] && clear && echo "No efi partitions found" && exit
 
+# formate partitions
+mkfs.ext4 $ROOT
+mkswap $SWAP
+mkfs.fat -F32 $EFI
+
 # start installation
 mount $ROOT /mnt
 swapon $SWAP
-
-# add mkfs and mkswap
 
 pacstrap /mnt base base-devel linux linux-firmware vim
 
