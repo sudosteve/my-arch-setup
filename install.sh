@@ -10,8 +10,7 @@ DISK="$(dialog --stdout --title "Choose for installation" --menu "Select which d
 # Ask if we want to partition a disk
 dialog --defaultno --title "Partion disk?" --yesno "Would you like to open fdisk to partition the disk" 8 50 && ( clear ; fdisk $DISK )
 
-# unmount partitions, then pick partitions for installation
-umount -a
+# Select partitions for installation
 getparts() { \
     lsblk -rpo "name,size,type,parttypename,mountpoint" | grep $1 | \
     awk '$3=="part"&&$5==""{printf "%s (%s)\n",$1,$2}'
