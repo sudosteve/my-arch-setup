@@ -37,8 +37,8 @@ swapon $SWAP
 
 pacstrap /mnt base base-devel linux linux-firmware vim
 
-mkdir /mnt/boot/efi
-mount $EFI /mnt/boot/efi
+# mkdir /mnt/boot/efi
+mount $EFI /mnt/boot
 genfstab -U /mnt >> /mnt/etc/fstab
 
 wget https://raw.githubusercontent.com/sk8ersteve/my-arch-setup/master/chroot_install.sh
