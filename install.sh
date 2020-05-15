@@ -37,18 +37,16 @@ swapon $SWAP
 
 pacstrap /mnt base base-devel linux linux-firmware vim
 
-# mkdir /mnt/boot/efi
-mount $EFI /mnt/boot
+mkdir /mnt/boot/EFI
+mount $EFI /mnt/boot/EFI
 genfstab -U /mnt >> /mnt/etc/fstab
 
 wget https://raw.githubusercontent.com/sk8ersteve/my-arch-setup/master/chroot_install.sh
 chmod +x chroot_install.sh
 cp chroot_install.sh /mnt/install.sh
-echo $DISK > /mnt/disk.tmp
 read -p "About to enter chroot.\nPress enter to continue"
 arch-chroot /mnt ./install.sh
 rm /mnt/install.sh
-rm /mnt/disk.tmp
 
 umount -a
 read -p "Press enter to reboot"

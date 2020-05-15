@@ -43,10 +43,8 @@ echo "%wheel ALL=(ALL) ALL
 pacman --noconfirm --needed -S xf86-video-intel nvidia bbswitch
 
 # install grub bootloader
-DISK=$(cat disk.tmp)
 pacman --noconfirm --needed -S grub os-prober efibootmgr
-#grub-install $DISK
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 exit
