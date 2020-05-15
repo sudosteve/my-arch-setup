@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 pacman -Sy --noconfirm dialog || { echo "Not running as root" ; exit; }
 
@@ -49,6 +49,7 @@ cp chroot_install.sh /mnt/install.sh
 read -p "About to enter chroot.\nPress enter to continue"
 arch-chroot /mnt ./install.sh
 rm /mnt/install.sh
+rm /mnt/disk.tmp
 
 umount -a
 read -p "Press enter to reboot"
