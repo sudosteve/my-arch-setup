@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 pacman --noconfirm --needed -S dialog
 
