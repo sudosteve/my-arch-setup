@@ -44,7 +44,7 @@ pacman --noconfirm --needed -S xf86-video-intel nvidia bbswitch
 
 # install grub bootloader
 pacman --noconfirm --needed -S grub os-prober efibootmgr
-grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 exit

@@ -3,6 +3,12 @@
 # make sure we are in right directory
 [ -f user_setup.sh ] || (echo "RUN FROM REPO ROOT PLS" && exit)
 
+# # add user with zsh
+# pacman --noconfirm --needed -S zsh
+# useradd -m -G wheel -s /bin/zsh $USERNAME
+# echo "Set password for user $USERNAME"
+# passwd $USERNAME
+
 # install pacman packages
 sudo pacman -S - < pacmanlist.txt
 
