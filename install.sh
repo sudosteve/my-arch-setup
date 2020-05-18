@@ -8,7 +8,7 @@ DISKS="$(lsblk -rpo "name,size,type,mountpoint" | awk '$3=="disk"{printf "%s (%s
 DISK="$(dialog --stdout --title "Choose for installation" --menu "Select which disk you would like to use for the installation" 10 70 4 $(echo $DISKS))"
 
 # Ask if we want to partition a disk
-dialog --defaultno --title "Partion disk?" --yesno "Would you like to open fdisk to partition the disk" 8 50 && ( clear ; fdisk $DISK )
+dialog --defaultno --title "Partion disk?" --yesno "Would you like to open fdisk to partition the disk" 8 50 && ( clear ; fdisk $DISK ; sleep 1 )
 
 # Select partitions for installation
 getparts() { \
@@ -27,7 +27,8 @@ SWAP=$(getpart "Swap partition" "Choose swap partition" "swap")
 [ -z $SWAP ] && clear && echo "No swap partitions found" && exit
 
 # format partitions
-mkfs.fat -F32 $EFI
+EFIISFAT=$(lsblk -rpo "name,fstype" | grep $EFI | grep "vfat")
+[ -z $EFIISFAT ] && mkfs.fat -F32 $EFI
 mkfs.ext4 $ROOT
 mkswap $SWAP
 

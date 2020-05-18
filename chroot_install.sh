@@ -4,7 +4,6 @@ pacman --noconfirm --needed -S dialog
 
 # Prompt user for hostname, username
 HOSTNAME=$(dialog --stdout --inputbox "Enter your hostname" 10 50 --stdout)
-USERNAME=$(dialog --stdout --inputbox "Enter your username" 10 50 --stdout)
 clear
 
 # locale setting
@@ -29,11 +28,11 @@ pacman --noconfirm --needed -S networkmanager dhcpcd
 systemctl enable NetworkManager
 systemctl enable dhcpcd
 
-# add user with zsh
-pacman --noconfirm --needed -S zsh
-useradd -m -G wheel -s /bin/zsh $USERNAME
-echo "Set password for user $USERNAME"
-passwd $USERNAME
+# # add user with zsh
+# pacman --noconfirm --needed -S zsh
+# useradd -m -G wheel -s /bin/zsh $USERNAME
+# echo "Set password for user $USERNAME"
+# passwd $USERNAME
 
 # add perissions to sudoers file
 echo "%wheel ALL=(ALL) ALL
@@ -46,6 +45,11 @@ pacman --noconfirm --needed -S xf86-video-intel nvidia bbswitch
 pacman --noconfirm --needed -S grub os-prober efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
+
+mkdir /tmp && cd /tmp
+git clone https://github.com/sk8ersteve/my-arch-setup.git
+cd my-arch-setup
+sh user_setup.sh
 
 exit
 
