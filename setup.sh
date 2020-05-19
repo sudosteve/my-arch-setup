@@ -19,4 +19,4 @@ echo "Set password for user $USERNAME"
 passwd $USERNAME
 touch /home/$USERNAME/.zshrc
 
-sudo -u "$USERNAME" user_setup.sh
+sudo -u "$USERNAME" ./user_setup.sh

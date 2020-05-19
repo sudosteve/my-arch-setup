@@ -3,7 +3,8 @@
 # install dots
 mkdir -p ~/git-repos
 cd ~/git-repos
-git clone git@github.com:sk8ersteve/dotfiles.git
+git clone https://github.com/sk8ersteve/dotfiles.git
+git clone https://github.com/sk8ersteve/my-arch-setup.git # optional
 cd ~
 ln -s git-repos/dotfiles/.config .config
 ln -s git-repos/dotfiles/.local .local
@@ -17,6 +18,8 @@ cd ~/git-repos
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+cd ..
+rm -rf yay
 
 # install yay packages
 yay -S - < aurlist.txt
