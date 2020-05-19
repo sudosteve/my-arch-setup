@@ -20,15 +20,15 @@ getpart() { \
     --menu "$2" 16 70 8 $(getparts $3)
 }
 EFI=$(getpart "efi partition" "Choose efi system partition" "EFI")
-[ -z $EFI ] && clear && echo "No efi partitions found" && exit
+[ -z "$EFI" ] && clear && echo "No efi partitions found" && exit
 ROOT=$(getpart "Root partition" "Choose a partition to install Arch on" "filesystem")
-[ -z $ROOT ] && clear && echo "No filesystem partitions found for root" && exit
+[ -z "$ROOT" ] && clear && echo "No filesystem partitions found for root" && exit
 SWAP=$(getpart "Swap partition" "Choose swap partition" "swap")
-[ -z $SWAP ] && clear && echo "No swap partitions found" && exit
+[ -z "$SWAP" ] && clear && echo "No swap partitions found" && exit
 
 # format partitions
 EFIISFAT=$(lsblk -rpo "name,fstype" | grep $EFI | grep "vfat")
-[ -z $EFIISFAT ] && mkfs.fat -F32 $EFI
+[ -z "$EFIISFAT" ] && mkfs.fat -F32 $EFI
 mkfs.ext4 $ROOT
 mkswap $SWAP
 

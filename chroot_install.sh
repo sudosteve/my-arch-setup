@@ -41,7 +41,8 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # optional, sets up computer how I like it
-mkdir /tmp && cd /tmp
+mkdir -p /tmp
+cd /tmp
 git clone https://github.com/sk8ersteve/my-arch-setup.git
 cd my-arch-setup
 sh setup.sh

@@ -11,12 +11,6 @@ sudo pacman -S - < pacmanlist.txt
 # - enables trackpad touch to click and natural scrolling
 sudo cp xorgconf/* /etc/X11/xorg.conf.d/
 
-# install yay AUR helper
-cd /tmp
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
 # add user with zsh
 USERNAME=$(dialog --stdout --inputbox "Enter your username" 10 50 --stdout)
 pacman --noconfirm --needed -S zsh
