@@ -3,14 +3,6 @@
 # make sure we are in right directory
 [ -f setup.sh ] || (echo "RUN FROM REPO ROOT PLS" && exit)
 
-# add user with zsh
-USERNAME=$(dialog --stdout --inputbox "Enter your username" 10 50 --stdout)
-pacman --noconfirm --needed -S zsh
-useradd -m -G wheel -s /bin/zsh $USERNAME
-echo "Set password for user $USERNAME"
-passwd $USERNAME
-# touch /home/$USERNAME/.zshrc
-
 # install pacman packages
 sudo pacman -S - < pacmanlist.txt
 
@@ -24,5 +16,13 @@ cd /tmp
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+
+# add user with zsh
+USERNAME=$(dialog --stdout --inputbox "Enter your username" 10 50 --stdout)
+pacman --noconfirm --needed -S zsh
+useradd -m -G wheel -s /bin/zsh $USERNAME
+echo "Set password for user $USERNAME"
+passwd $USERNAME
+touch /home/$USERNAME/.zshrc
 
 sudo -u "$USERNAME" user_setup.sh

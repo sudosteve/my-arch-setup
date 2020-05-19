@@ -28,12 +28,6 @@ pacman --noconfirm --needed -S networkmanager dhcpcd
 systemctl enable NetworkManager
 systemctl enable dhcpcd
 
-# # add user with zsh
-# pacman --noconfirm --needed -S zsh
-# useradd -m -G wheel -s /bin/zsh $USERNAME
-# echo "Set password for user $USERNAME"
-# passwd $USERNAME
-
 # add perissions to sudoers file
 echo "%wheel ALL=(ALL) ALL
 %wheel ALL=(ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/reboot,/usr/bin/mount,/usr/bin/umount,/usr/bin/pacman,/usr/bin/yay" >> /etc/sudoers
@@ -46,10 +40,11 @@ pacman --noconfirm --needed -S grub os-prober efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
+# optional, sets up computer how I like it
 mkdir /tmp && cd /tmp
 git clone https://github.com/sk8ersteve/my-arch-setup.git
 cd my-arch-setup
-sh user_setup.sh
+sh setup.sh
 
 exit
 
