@@ -10,6 +10,7 @@ ln -s git-repos/dotfiles/.config .config
 ln -s git-repos/dotfiles/.local .local
 ln -s git-repos/dotfiles/.profile .profile
 ln -s git-repos/dotfiles/.profile .zprofile
+# these folders must exist for some stuff to work
 mkdir -p .local/share/zsh
 mkdir -p .local/share/gnupg
 
@@ -25,5 +26,11 @@ rm -rf yay
 yay -S - < aurlist.txt
 
 # install oh my zsh
+cd ~/git-repos/my-arch-setup
 CHSH="no" RUNZSH="no" sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+mv .oh-my-zsh ~/.config/oh-my-zsh
+cp conf/a_custom.zsh-theme ~/.config/oh-my-zsh/custom/
+
+# install my user directories
+mkdir -p dl dox pix
 
