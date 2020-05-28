@@ -23,6 +23,7 @@ cd ..
 rm -rf yay
 
 # install yay packages
+cd ~/git-repos/my-arch-setup
 yay -S - < aurlist.txt
 
 # install oh my zsh
