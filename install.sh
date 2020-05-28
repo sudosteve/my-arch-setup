@@ -28,7 +28,7 @@ SWAP=$(getpart "Swap partition" "Choose swap partition" "swap")
 
 # format partitions
 EFIISFAT=$(lsblk -rpo "name,fstype" | grep $EFI | grep "vfat")
-[ -z "$EFIISFAT" ] && mkfs.fat -F32 $EFI
+[ -z "$EFIISFAT" ] && echo "writing efi fs" && mkfs.fat -F32 $EFI
 mkfs.ext4 $ROOT
 mkswap $SWAP
 
@@ -49,7 +49,6 @@ read -p "About to enter chroot.\nPress enter to continue"
 arch-chroot /mnt ./install.sh
 rm /mnt/install.sh
 
-umount -a
 read -p "Press enter to reboot"
 reboot
 
