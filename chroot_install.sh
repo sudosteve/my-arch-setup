@@ -45,7 +45,7 @@ sh setup.sh
 
 # install grub bootloader. Do this last because previous step copies grub.cfg
 pacman --noconfirm --needed -S grub os-prober efibootmgr
-grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 exit
