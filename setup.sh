@@ -19,8 +19,8 @@ cp conf/grub /etc/default/grub
 cp conf/optimus-manager/* /etc/optimus-manager/
 
 # add user with zsh
-USERNAME=$(dialog --stdout --inputbox "Enter your username" 10 50 --stdout)
 pacman --noconfirm --needed -S zsh
+USERNAME=$(dialog --stdout --inputbox "Enter your username" 10 50 --stdout)
 useradd -m -G wheel -s /bin/zsh $USERNAME
 echo "Set password for user $USERNAME"
 passwd $USERNAME

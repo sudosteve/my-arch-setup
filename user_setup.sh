@@ -28,7 +28,7 @@ yay -S - < aurlist.txt
 # install oh my zsh
 cd ~/git-repos/my-arch-setup
 CHSH="no" RUNZSH="no" sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-mv .oh-my-zsh ~/.config/oh-my-zsh
+mv ~/.oh-my-zsh ~/.config/oh-my-zsh
 cp conf/a_custom.zsh-theme ~/.config/oh-my-zsh/custom/
 
 # install my user directories
