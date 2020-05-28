@@ -14,7 +14,7 @@ git
 gnome-keyring
 go
 gtk2fontsel
-gvim
+vim
 htop
 i3-gaps
 i3blocks

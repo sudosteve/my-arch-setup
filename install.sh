@@ -36,7 +36,7 @@ mkswap $SWAP
 mount $ROOT /mnt
 swapon $SWAP
 
-pacstrap /mnt base base-devel linux linux-firmware vim
+pacstrap /mnt base base-devel linux linux-firmware
 
 mkdir /mnt/boot/EFI
 mount $EFI /mnt/boot/EFI
