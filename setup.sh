@@ -5,6 +5,7 @@
 
 # install pacman packages
 pacman --noconfirm --needed -S - < pacmanlist.txt
+read -p "Check"
 
 # install xorg confs
 # - disables mouse acceleration

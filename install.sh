@@ -45,7 +45,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 wget https://raw.githubusercontent.com/sk8ersteve/my-arch-setup/master/chroot_install.sh
 chmod +x chroot_install.sh
 cp chroot_install.sh /mnt/install.sh
-read -p "About to enter chroot.\nPress enter to continue"
+read -p "About to enter chroot. Press enter to continue"
 arch-chroot /mnt ./install.sh
 rm /mnt/install.sh
 
