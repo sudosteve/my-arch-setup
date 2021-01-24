@@ -11,4 +11,5 @@ sc-im
 simple-mtpfs-git
 spotify
 task-spooler
+ttf-dejavu
 yay
