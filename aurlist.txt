@@ -17,4 +17,5 @@ sc-im
 simple-mtpfs-git
 task-spooler
 vulkan-amdgpu-pro
+ttf-dejavu
 yay
