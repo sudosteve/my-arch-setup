@@ -47,6 +47,8 @@ read
 [ -z "$REPLY" ] && checkout $REPLY
 cd my-arch-setup
 sh setup.sh
+cd /
+rm -r /tmp
 
 # Install grub bootloader. Do this last because previous step copies grub.cfg
 pacman --noconfirm --needed -S grub os-prober efibootmgr
