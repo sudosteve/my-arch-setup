@@ -23,27 +23,28 @@ echo "Set root password"
 passwd
 
 # Network Manager
-pacman --noconfirm --needed -S networkmanager
 pacman --noconfirm --needed -S networkmanager dhcpcd
 systemctl enable NetworkManager
 systemctl enable dhcpcd
 
-# add perissions to sudoers file
+# Add perissions to sudoers file
 echo "%wheel ALL=(ALL) ALL
-%wheel ALL=(ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/reboot,/usr/bin/mount,/usr/bin/umount,/usr/bin/pacman,/usr/bin/yay" >> /etc/sudoers
+%wheel ALL=(ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/reboot,/usr/bin/mount,/usr/bin/umount,/usr/bin/pacman,/usr/bin/paru" >> /etc/sudoers
 
-# graphics
-pacman --noconfirm --needed -S xf86-video-intel nvidia bbswitch
-
-# optional, sets up computer how I like it
+# Sets up computer how I like it (optional)
 pacman --noconfirm --needed -S git
 mkdir -p /tmp
 cd /tmp
 git clone https://github.com/sk8ersteve/my-arch-setup.git
+# Select branch
+echo Select a branch to match your current machine [master]:
+g branch | awk '{gsub("* ", ""); print $1};'
+read
+[ -z "$REPLY" ] && checkout $REPLY
 cd my-arch-setup
 sh setup.sh
 
-# install grub bootloader. Do this last because previous step copies grub.cfg
+# Install grub bootloader. Do this last because previous step copies grub.cfg
 pacman --noconfirm --needed -S grub os-prober efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg

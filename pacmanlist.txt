@@ -1,4 +1,3 @@
-amd-ucode
 arandr
 arch-install-scripts
 atool
@@ -33,7 +32,6 @@ neovim
 network-manager-applet
 noto-fonts-emoji
 ntfs-3g
-opencl-amd
 openssh
 os-prober
 pavucontrol
@@ -69,7 +67,6 @@ wine-staging
 xclip
 xcompmgr
 xdotool
-xf86-video-amdgpu
 xorg-server
 xorg-xbacklight
 xorg-xdpyinfo

@@ -8,7 +8,6 @@ lib32-mangohud
 mangohud
 minecraft-launcher
 mprime
-opencl-amd
 paru
 python-colorthief
 python-haishoku
@@ -16,6 +15,4 @@ pywal-git
 sc-im
 simple-mtpfs-git
 task-spooler
-vulkan-amdgpu-pro
 ttf-dejavu
-yay
