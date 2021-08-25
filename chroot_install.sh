@@ -31,6 +31,10 @@ systemctl enable dhcpcd
 echo "%wheel ALL=(ALL) ALL
 %wheel ALL=(ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/reboot,/usr/bin/mount,/usr/bin/umount,/usr/bin/pacman,/usr/bin/paru" >> /etc/sudoers
 
+# Install cpu microcode
+ucodepkg=$(dialog --stdout --title "Select cpu" --menu "Select cpu type for microcode installation" 10 50 2 amd-ucode AMD intel-ucode Intel)
+pacman --noconfirm --needed -S $ucodepkg
+
 # Sets up computer how I like it (optional)
 pacman --noconfirm --needed -S git
 mkdir -p /tmp
