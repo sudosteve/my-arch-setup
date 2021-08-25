@@ -52,3 +52,4 @@ GRUB_GFXPAYLOAD_LINUX=keep
 # Uncomment to make GRUB remember the last selection. This requires
 # setting 'GRUB_DEFAULT=saved' above.
 GRUB_SAVEDEFAULT="true"
+GRUB_DISABLE_OS_PROBER=false
