@@ -1,22 +1,23 @@
 #!/bin/sh
 
-# make sure we are in right directory
+# Make sure we are in right directory
 [ -f setup.sh ] || (echo "RUN FROM REPO ROOT PLS" && exit)
 
-# install pacman packages
+# Install pacman packages
 pacman --noconfirm --needed -S - < pacmanlist.txt
 read -p "Check"
 
-# install xorg confs
+# Install xorg confs
 # - disables mouse acceleration
 # - enables trackpad touch to click and natural scrolling
 cp conf/xorg/* /etc/X11/xorg.conf.d/
 
+# Install pulse config
+# - adds echo noise/cancellation
+cp conf/default.pa /etc/pulse/
+
 # install grub config
 cp conf/grub /etc/default/grub
-
-# install optimus configs
-cp conf/optimus-manager/* /etc/optimus-manager/
 
 # add user with zsh
 pacman --noconfirm --needed -S zsh
