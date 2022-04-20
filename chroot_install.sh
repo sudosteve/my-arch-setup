@@ -29,7 +29,7 @@ systemctl enable dhcpcd
 
 # Add perissions to sudoers file
 echo "%wheel ALL=(ALL) ALL
-%wheel ALL=(ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/reboot,/usr/bin/mount,/usr/bin/umount,/usr/bin/pacman,/usr/bin/paru" >> /etc/sudoers
+%wheel ALL=(ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/reboot,/usr/bin/mount,/usr/bin/umount,/usr/bin/pacman,/usr/bin/paru,/usr/bin/prime-switch" >> /etc/sudoers
 
 # Install cpu microcode
 ucodepkg=$(dialog --stdout --title "Select cpu" --menu "Select cpu type for microcode installation" 10 50 2 amd-ucode AMD intel-ucode Intel)
@@ -41,10 +41,10 @@ mkdir -p /tmp
 cd /tmp
 git clone https://github.com/sk8ersteve/my-arch-setup.git
 # Select branch
-echo Select a branch to match your current machine [master]:
-g branch | awk '{gsub("* ", ""); print $1};'
-read
-[ -z "$REPLY" ] && checkout $REPLY
+# echo Select a branch to match your current machine [master]:
+# g branch | awk '{gsub("* ", ""); print $1};'
+# read
+# [ -z "$REPLY" ] && g checkout $REPLY
 cd my-arch-setup
 sh setup.sh
 cd /

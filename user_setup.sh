@@ -21,9 +21,17 @@ makepkg -si
 cd ..
 rm -rf $aurhelper
 
+# Install optimus-manager
+read -p "Install optimus-manager?[y/N]: " choice
+if [[ $choice == y* ]] || [[ $choice == Y* ]]
+then
+    $aurhelper --noconfirm --needed -S optimus-manager
+    sudo cp -r conf/optimus-manager /etc/
+fi
+
 # install AUR packages
 cd /tmp/my-arch-setup
-$aurhelper -S - < aurlist.txt
+$aurhelper --noconfirm --needed -S - < aurlist.txt
 
 # install oh my zsh
 CHSH="no" RUNZSH="no" sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

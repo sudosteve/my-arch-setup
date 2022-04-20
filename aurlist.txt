@@ -11,7 +11,6 @@ mprime
 paru
 python-colorthief
 python-haishoku
-pywal-git
 sc-im
 simple-mtpfs-git
 task-spooler

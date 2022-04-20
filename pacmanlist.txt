@@ -1,6 +1,5 @@
 arandr
 arch-install-scripts
-atool
 clinfo
 code
 cronie
@@ -41,12 +40,12 @@ pavucontrol
 picom
 pulseaudio-alsa
 pulsemixer
+python-pywal
 qutebrowser
 ranger
 redshift
 rust
 rxvt-unicode
-sc-im
 sl
 slock
 strace
