@@ -14,7 +14,7 @@ graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "xf86-video-am
 read -p "Install intel graphics[y/N]: " choice
 graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "xf86-video-intel ")
 read -p "Install nvidia graphics?[y/N]: " choice
-graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "nvidia ")
+graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "nvidia lib32-nvidia-utils ")
 pacman --noconfirm --needed -S $graphicspkg
 
 # Install pacman packages

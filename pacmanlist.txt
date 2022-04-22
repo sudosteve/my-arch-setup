@@ -48,6 +48,7 @@ rust
 rxvt-unicode
 sl
 slock
+steam
 strace
 stress
 sxhkd
