@@ -3,6 +3,7 @@ brave-bin
 colorz
 dmenu-git
 elm-platform-bin
+iat
 j4-dmenu-desktop
 lib32-mangohud
 mangohud

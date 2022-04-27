@@ -138,4 +138,4 @@ load-module module-filter-apply
 #set-default-source input
 load-module module-echo-cancel source_name=noechosource sink_name=noechosink
 set-default-source noechosource
-set-default-sink noechosink
+#set-default-sink noechosink

@@ -10,7 +10,7 @@ cp conf/pacman.conf /etc/pacman.conf
 # TODO: check what other amd packages I have on my desktop
 graphicspkg=""
 read -p "Install amd graphics[y/N]: " choice
-graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "xf86-video-amdgpu vulkan-radeon lib32-mesa ")
+graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon lib32-mesa ")
 read -p "Install intel graphics[y/N]: " choice
 graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "xf86-video-intel ")
 read -p "Install nvidia graphics?[y/N]: " choice
