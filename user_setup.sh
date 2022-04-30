@@ -17,9 +17,11 @@ mkdir -p .local/share/gnupg
 # Install AUR helper
 git clone https://aur.archlinux.org/$aurhelper.git
 cd $aurhelper
-makepkg -si
+makepkg --noconfirm -si
 cd ..
 rm -rf $aurhelper
+
+cd /tmp/my-arch-setup
 
 # Install optimus-manager
 read -p "Install optimus-manager?[y/N]: " choice
@@ -29,18 +31,16 @@ then
     sudo cp -r conf/optimus-manager /etc/
 fi
 
-# install AUR packages
-cd /tmp/my-arch-setup
+# Install AUR packages
 $aurhelper --noconfirm --needed -S - < aurlist.txt
 
-# install oh my zsh
+# Install oh my zsh
 CHSH="no" RUNZSH="no" sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 mv ~/.oh-my-zsh ~/.config/oh-my-zsh
-cd /tmp/my-arch-setup
 cp conf/a_custom.zsh-theme ~/.config/oh-my-zsh/custom/
 
-# install my user directories
 cd ~
+
+# Install my user directories
 mkdir -p dl dox pix dev
-cd ~
 

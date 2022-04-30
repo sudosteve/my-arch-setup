@@ -2,5 +2,5 @@
 
 Easy install, from Arch ISO:
 
-    wget tinyurl.com/stevearchinstall
+    curl -LO tinyurl.com/stevearchinstall
     sh stevearchinstall

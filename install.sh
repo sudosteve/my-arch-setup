@@ -42,7 +42,7 @@ mkdir /mnt/boot/EFI
 mount $EFI /mnt/boot/EFI
 genfstab -U /mnt >> /mnt/etc/fstab
 
-wget https://raw.githubusercontent.com/sk8ersteve/my-arch-setup/master/chroot_install.sh
+curl -LO https://raw.githubusercontent.com/sk8ersteve/my-arch-setup/master/chroot_install.sh
 chmod +x chroot_install.sh
 cp chroot_install.sh /mnt/install.sh
 read -p "About to enter chroot. Press enter to continue"

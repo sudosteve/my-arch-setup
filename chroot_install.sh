@@ -40,11 +40,6 @@ pacman --noconfirm --needed -S git
 mkdir -p /tmp
 cd /tmp
 git clone https://github.com/sk8ersteve/my-arch-setup.git
-# Select branch
-# echo Select a branch to match your current machine [master]:
-# g branch | awk '{gsub("* ", ""); print $1};'
-# read
-# [ -z "$REPLY" ] && g checkout $REPLY
 cd my-arch-setup
 sh setup.sh
 cd /
