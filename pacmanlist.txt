@@ -97,6 +97,8 @@ xorg-xinput
 xorg-xsetroot
 xorg-xwininfo
 xprintidle
+wasm-bindgen
+wasm-pack
 xwallpaper
 youtube-dl
 zathura
