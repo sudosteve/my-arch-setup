@@ -1,6 +1,5 @@
 arandr
 arch-install-scripts
-clinfo
 code
 cronie
 dhcpcd
@@ -19,7 +18,6 @@ gnome-keyring
 go
 gparted
 grep
-gtk2fontsel
 gvfs
 htop
 i3-gaps
@@ -27,7 +25,6 @@ i3blocks
 ipython
 jdk-openjdk
 lib32-gamemode
-lib32-gtk2
 lutris
 maim
 man-db
@@ -37,7 +34,6 @@ mlocate
 mpv
 neofetch
 neovim
-network-manager-applet
 noto-fonts-emoji
 ntfs-3g
 openssh
@@ -54,7 +50,7 @@ qemu
 qutebrowser
 ranger
 redshift
-rust
+rustup
 rxvt-unicode
 seahorse
 sl
