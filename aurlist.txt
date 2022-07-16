@@ -5,8 +5,8 @@ dmenu-git
 elm-platform-bin
 iat
 j4-dmenu-desktop
-lib32-mangohud
-mangohud
+lib32-mangohud-git
+mangohud-git
 minecraft-launcher
 mprime
 paru

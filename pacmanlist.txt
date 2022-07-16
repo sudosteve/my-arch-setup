@@ -34,6 +34,7 @@ mlocate
 mpv
 neofetch
 neovim
+noise-suppression-for-voice
 noto-fonts-emoji
 ntfs-3g
 openssh

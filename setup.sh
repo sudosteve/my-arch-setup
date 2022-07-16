@@ -26,10 +26,6 @@ pacman --noconfirm --needed -S - < pacmanlist.txt
 # - enables trackpad touch to click and natural scrolling
 cp conf/xorg/* /etc/X11/xorg.conf.d/
 
-# Install pulse config
-# - adds echo noise/cancellation
-cp conf/default.pa /etc/pulse/
-
 # Install grub config
 cp conf/grub /etc/default/grub
 
