@@ -7,9 +7,9 @@ iat
 j4-dmenu-desktop
 lib32-mangohud-git
 mangohud-git
-minecraft-launcher
 mprime
 paru
+polymc-bin
 python-colorthief
 python-haishoku
 sc-im
