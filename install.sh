@@ -36,7 +36,13 @@ mkswap $SWAP
 mount $ROOT /mnt
 swapon $SWAP
 
-pacstrap /mnt base base-devel linux linux-firmware
+KERNAL=""
+read -p "Install linux-lts[y/N]: " choice
+KERNAL+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "linux-lts ")
+read -p "Install linux-zen[y/N]: " choice
+KERNAL+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "linux-zen ")
+
+pacstrap /mnt base base-devel linux linux-firmware $KERNAL
 
 mkdir /mnt/boot/EFI
 mount $EFI /mnt/boot/EFI
