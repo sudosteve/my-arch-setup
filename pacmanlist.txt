@@ -1,16 +1,18 @@
+ack
+acpi
+alacritty
 arandr
 arch-install-scripts
-code
 cronie
 dhcpcd
 dialog
 discord
+docker
 dosfstools
 dunst
 ecryptfs-utils
 efibootmgr
 exfat-utils
-feh
 fuseiso
 gamemode
 git
@@ -23,6 +25,7 @@ htop
 i3-gaps
 i3blocks
 ipython
+j4-dmenu-desktop
 jdk-openjdk
 lib32-gamemode
 lutris
@@ -48,7 +51,6 @@ python-pip
 python-pywal
 python-wheel
 qemu
-qutebrowser
 ranger
 redshift
 rustup
@@ -62,8 +64,7 @@ stress
 sxhkd
 sxiv
 telegram-desktop
-texlive-core
-texlive-most
+texlive-latexrecommended
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
@@ -97,7 +98,7 @@ xprintidle
 wasm-bindgen
 wasm-pack
 xwallpaper
-youtube-dl
+yt-dlp
 zathura
 zathura-pdf-mupdf
 zsh-syntax-highlighting
