@@ -5,7 +5,7 @@
 
 # Install pacman config with 32bit support
 cp conf/pacman.conf /etc/pacman.conf
-pacman -Sy archlinux-keyring
+pacman -Sy --noconfirm archlinux-keyring
 
 # Select graphics drivers to install
 # TODO: check what other amd packages I have on my desktop
