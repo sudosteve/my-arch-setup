@@ -11,5 +11,5 @@ polymc-bin
 python-colorthief
 python-haishoku
 sc-im
-simple-mtpfs-git
+simple-mtpfs
 task-spooler
