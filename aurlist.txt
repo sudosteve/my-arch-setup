@@ -13,4 +13,3 @@ python-haishoku
 sc-im
 simple-mtpfs-git
 task-spooler
-ttf-dejavu
