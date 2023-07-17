@@ -14,6 +14,9 @@ ln -s dotfiles/.profile .zprofile
 mkdir -p .local/share/zsh
 mkdir -p .local/share/gnupg
 
+# Set default rust version
+rustup default nightly
+
 # Install AUR helper
 git clone https://aur.archlinux.org/$aurhelper.git
 cd $aurhelper
