@@ -4,7 +4,6 @@ alacritty
 arandr
 arch-install-scripts
 cronie
-dhcpcd
 dialog
 discord
 docker
