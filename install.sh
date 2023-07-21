@@ -38,9 +38,9 @@ swapon $SWAP
 
 KERNAL=""
 read -p "Install linux-lts[y/N]: " choice
-KERNAL+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "linux-lts ")
+KERNAL+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "linux-lts linux-lts-headers ")
 read -p "Install linux-zen[y/N]: " choice
-KERNAL+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "linux-zen ")
+KERNAL+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "linux-zen linux-zen-headers ")
 
 pacstrap /mnt base base-devel linux linux-firmware $KERNAL
 

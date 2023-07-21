@@ -8,14 +8,24 @@ cp conf/pacman.conf /etc/pacman.conf
 pacman -Sy --noconfirm archlinux-keyring
 
 # Select graphics drivers to install
-# TODO: check what other amd packages I have on my desktop
 graphicspkg=""
+
+# AMDGPU
 read -p "Install amd graphics[y/N]: " choice
-graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon lib32-mesa ")
+graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] &&
+    echo "xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon mesa lib32-mesa ")
+
+# Intel graphics
 read -p "Install intel graphics[y/N]: " choice
-graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "xf86-video-intel ")
+graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] &&
+    echo "xf86-video-intel ")
+
+# Nvidia graphics
 read -p "Install nvidia graphics?[y/N]: " choice
-graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "nvidia lib32-nvidia-utils ")
+graphicspkg+=$([[ $choice == y* ]] || [[ $choice == Y* ]] &&
+    echo "nvidia nvidia-utils lib32-nvidia-utils " &&
+    [ -n "$(pacman -Q linux-lts)" ] && echo "nvidia-lts ")
+
 pacman --noconfirm --needed -S $graphicspkg
 
 # Install pacman packages
