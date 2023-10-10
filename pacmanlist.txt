@@ -3,6 +3,7 @@ acpi
 alacritty
 arandr
 arch-install-scripts
+chromium
 cronie
 dialog
 discord
@@ -17,7 +18,6 @@ gamemode
 git
 gnome-keyring
 go
-gparted
 grep
 gvfs
 htop
@@ -27,10 +27,11 @@ ipython
 j4-dmenu-desktop
 jdk-openjdk
 lib32-gamemode
+libva-mesa-driver
+libva-utils
 lutris
 maim
 man-db
-mediainfo
 mesa-demos
 mlocate
 mpv
@@ -38,7 +39,10 @@ neofetch
 neovim
 noise-suppression-for-voice
 noto-fonts-emoji
+npm
 ntfs-3g
+obsidian
+openrazer-driver-dkms
 openssh
 os-prober
 p7zip
@@ -50,7 +54,6 @@ python-pip
 python-pywal
 python-wheel
 qemu
-ranger
 redshift
 rustup
 rxvt-unicode
@@ -80,6 +83,8 @@ unzip
 vim
 virt-manager
 virtualbox-host-modules-arch
+wasm-bindgen
+wasm-pack
 wget
 wine-gecko
 wine-mono
@@ -95,8 +100,6 @@ xorg-xinput
 xorg-xsetroot
 xorg-xwininfo
 xprintidle
-wasm-bindgen
-wasm-pack
 xwallpaper
 yt-dlp
 zathura

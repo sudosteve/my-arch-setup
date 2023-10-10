@@ -1,15 +1,10 @@
 brave-bin
-colorz
 dmenu-git
-elm-platform-bin
+gpu-screen-recorder-git
 iat
 lib32-mangohud-git
 mangohud-git
 mprime
 paru
-polymc-bin
-python-colorthief
-python-haishoku
+prismlauncher-qt5-bin
 sc-im
-simple-mtpfs
-task-spooler
