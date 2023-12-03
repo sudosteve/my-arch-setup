@@ -13,6 +13,7 @@ ln -s dotfiles/.profile .zprofile
 # These folders must exist for some stuff to work
 mkdir -p .local/share/zsh
 mkdir -p .local/share/gnupg
+rm .bash*
 
 # Set default rust version
 export RUSTUP_HOME="$HOME/.local/share/rustup"
