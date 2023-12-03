@@ -15,6 +15,7 @@ mkdir -p .local/share/zsh
 mkdir -p .local/share/gnupg
 
 # Set default rust version
+export RUSTUP_HOME="$HOME/.local/share/rustup"
 rustup default nightly
 
 # Install AUR helper
@@ -45,5 +46,5 @@ cp conf/a_custom.zsh-theme ~/.config/oh-my-zsh/custom/
 cd ~
 
 # Install my user directories
-mkdir -p dl dox pix dev
+mkdir -p dw dox pix dev
 
