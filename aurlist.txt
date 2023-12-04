@@ -8,3 +8,5 @@ mprime
 paru
 prismlauncher-qt5-bin
 sc-im
+vscodium-bin
+zenmonitor3-git
