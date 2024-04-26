@@ -58,8 +58,7 @@ python-pip
 python-pywal
 python-wheel
 qbittorrent
-qdirstat
-qemu
+qemu-full
 redshift
 ripgrep
 rustup
@@ -73,6 +72,7 @@ stress
 sxhkd
 sxiv
 telegram-desktop
+tesseract-data-eng
 texlive-latexrecommended
 thunar
 thunar-archive-plugin
@@ -98,6 +98,7 @@ wine-mono
 wine-staging
 xclip
 xcompmgr
+xdg-desktop-portal-gtk
 xdotool
 xorg-server
 xorg-xbacklight
