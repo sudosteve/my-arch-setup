@@ -15,7 +15,7 @@ dosfstools
 dunst
 ecryptfs-utils
 efibootmgr
-exfat-utils
+exfatprogs
 fuseiso
 gamemode
 git

@@ -1,3 +1,4 @@
+audio-select
 brave-bin
 dmenu-git
 gpu-screen-recorder-git
