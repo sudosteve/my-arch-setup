@@ -1,5 +1,3 @@
-Fix xorg conf cp
+Test if creating gnupg and zsh folders manually is still necessary
 Fix all pacmanlist things
 Create pacmanlist verifier
-Add razer-rs installation stuff
-Copy my laptop xorg config to xorg-extra

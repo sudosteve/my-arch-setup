@@ -10,13 +10,13 @@ ln -s dotfiles/.config .config
 ln -s dotfiles/.local .local
 ln -s dotfiles/.profile .profile
 ln -s dotfiles/.profile .zprofile
+source .profile
 # These folders must exist for some stuff to work
 mkdir -p .local/share/zsh
 mkdir -p .local/share/gnupg
 rm .bash*
 
 # Set default rust version
-export RUSTUP_HOME="$HOME/.local/share/rustup"
 rustup default nightly
 
 # Install AUR helper
