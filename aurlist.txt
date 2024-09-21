@@ -6,7 +6,7 @@ iat
 lib32-mangohud-git
 mangohud-git
 mprime
-paru
+paru-git
 prismlauncher-qt5-bin
 qdirstat
 sc-im
