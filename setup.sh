@@ -7,6 +7,14 @@
 cp conf/pacman.conf /etc/pacman.conf
 pacman -Sy --noconfirm archlinux-keyring
 
+# Set up reflector service
+pacman --noconfirm --needed -S reflector
+cp conf/reflector.conf /etc/reflector/
+systemctl enable reflector.timer
+
+# Run reflector service right now
+systemctl start reflector.service
+
 # Select graphics drivers to install
 graphicspkg=""
 
