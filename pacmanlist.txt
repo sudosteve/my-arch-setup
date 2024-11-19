@@ -55,7 +55,6 @@ pavucontrol
 pulseaudio-alsa
 pulsemixer
 python-pip
-python-pywal
 python-wheel
 qbittorrent
 qemu-full
