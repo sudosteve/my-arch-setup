@@ -31,11 +31,13 @@ j4-dmenu-desktop
 jdk-openjdk
 jdk17-openjdk
 lib32-gamemode
+lib32-mangohud
 libva-mesa-driver
 libva-utils
 lutris
 maim
 man-db
+mangohud
 mediainfo
 mesa-demos
 mlocate

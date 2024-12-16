@@ -3,8 +3,6 @@ brave-bin
 dmenu-git
 gpu-screen-recorder-git
 iat
-lib32-mangohud-git
-mangohud-git
 mprime
 paru-git
 python-pywal16
