@@ -46,6 +46,9 @@ cp conf/a_custom.zsh-theme ~/.config/oh-my-zsh/custom/
 
 cd ~
 
+# Enable user services
+systemctl --user enable battery-notify.service
+
 # Install my user directories
 mkdir -p dw dox pix dev
 

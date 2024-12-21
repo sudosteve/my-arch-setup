@@ -1,7 +1,7 @@
 audio-select
 brave-bin
 dmenu-git
-gpu-screen-recorder-git
+gpu-screen-recorder
 iat
 mprime
 paru-git

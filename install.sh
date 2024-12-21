@@ -42,7 +42,7 @@ KERNAL+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "linux-lts linux-lt
 read -p "Install linux-zen[y/N]: " choice
 KERNAL+=$([[ $choice == y* ]] || [[ $choice == Y* ]] && echo "linux-zen linux-zen-headers ")
 
-pacstrap /mnt base base-devel linux linux-firmware $KERNAL
+pacstrap /mnt base base-devel linux linux-firmware linux-headers $KERNAL
 
 mkdir /mnt/boot/EFI
 mount $EFI /mnt/boot/EFI

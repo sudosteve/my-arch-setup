@@ -1,3 +1,5 @@
 Test if creating gnupg and zsh folders manually is still necessary
 Fix all pacmanlist things
 Create pacmanlist verifier
+Check service enablement for
+- gnome-keyring-daemon
