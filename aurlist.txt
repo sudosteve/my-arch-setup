@@ -6,7 +6,7 @@ iat
 mprime
 paru-git
 python-pywal16
-qdirstat
+qdirstat-bin
 sc-im
 vscodium-bin
 zenmonitor3-git
