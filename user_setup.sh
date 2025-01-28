@@ -40,7 +40,7 @@ fi
 $aurhelper --noconfirm --needed -S - < aurlist.txt
 
 # Install oh my zsh
-CHSH="no" RUNZSH="no" sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+CHSH="no" RUNZSH="no" KEEP_ZSHRC="yes" sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 mv ~/.oh-my-zsh ~/.config/oh-my-zsh
 cp conf/a_custom.zsh-theme ~/.config/oh-my-zsh/custom/
 
