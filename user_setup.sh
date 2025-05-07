@@ -10,6 +10,7 @@ ln -s dotfiles/.config .config
 ln -s dotfiles/.local .local
 ln -s dotfiles/.profile .profile
 ln -s dotfiles/.profile .zprofile
+ln -s dotfiles/.xprofile .xprofile
 source ./.profile
 # These folders must exist for some stuff to work
 mkdir -p .local/share/zsh
