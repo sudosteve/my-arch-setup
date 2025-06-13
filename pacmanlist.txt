@@ -45,6 +45,7 @@ mpv
 neofetch
 neovim
 net-tools
+noto-fonts
 noto-fonts-emoji
 npm
 ntfs-3g
@@ -52,6 +53,7 @@ obsidian
 openrazer-driver-dkms
 openssh
 os-prober
+otf-firamono-nerd
 p7zip
 pavucontrol
 prismlauncher
@@ -84,7 +86,7 @@ tlp
 tmux
 tree
 ttf-dejavu
-ttf-fira-mono
+ttf-liberation
 tumbler
 unclutter
 unrar
