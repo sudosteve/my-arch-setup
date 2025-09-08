@@ -9,4 +9,5 @@ python-pywal16
 qdirstat-bin
 sc-im
 vscodium-bin
+xdg-terminal-exec
 zenmonitor3-git
