@@ -1,9 +1,11 @@
+ack
 audio-select
 brave-bin
 dmenu-git
 gpu-screen-recorder-ui
 iat
 mprime
+neofetch
 paru
 python-pywal16
 qdirstat-bin

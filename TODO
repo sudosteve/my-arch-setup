@@ -1,4 +1,5 @@
 Test if creating gnupg and zsh folders manually is still necessary
+Figure out font stuff
 Fix all pacmanlist things
 Create pacmanlist verifier
 Check service enablement for
