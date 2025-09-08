@@ -2,7 +2,7 @@ ack
 audio-select
 brave-bin
 dmenu-git
-gpu-screen-recorder-ui
+gpu-screen-recorder
 iat
 mprime
 neofetch
@@ -12,4 +12,3 @@ qdirstat-bin
 sc-im
 vscodium-bin
 xdg-terminal-exec
-zenmonitor3-git

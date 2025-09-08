@@ -45,6 +45,7 @@ mesa-demos
 mpv
 neovim
 net-tools
+networkmanager
 noto-fonts
 noto-fonts-emoji
 ntfs-3g

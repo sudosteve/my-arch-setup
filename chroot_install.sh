@@ -25,9 +25,8 @@ echo "Set root password"
 passwd
 
 # Network Manager
-pacman --noconfirm --needed -S dhcpcd iwd
-systemctl enable dhcpcd
-systemctl enable iwd
+pacman --noconfirm --needed -S networkmanager
+systemctl enable NetworkManager
 
 # Add perissions to sudoers file
 echo "%wheel ALL=(ALL) ALL
