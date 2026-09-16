@@ -2,7 +2,6 @@ ack
 audio-select
 betaflight-configurator-bin
 brave-bin
-dmenu-git
 gpu-screen-recorder-ui
 iat
 mprime
@@ -10,7 +9,6 @@ neofetch
 onlyoffice-bin
 paru
 peakperf-git
-popcorntime-bin
 python-pywal16
 qdirstat-bin
 sc-im
