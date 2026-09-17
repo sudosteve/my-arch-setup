@@ -11,7 +11,6 @@ cloc
 cmake
 cronie
 dialog
-discord
 docker
 docker-compose
 dosfstools
@@ -24,6 +23,7 @@ gamemode
 git
 gnome-keyring
 go
+gpu-screen-recorder-ui
 grub
 htop
 i3-wm
@@ -55,7 +55,6 @@ openrazer-driver-dkms
 openssh
 os-prober
 otf-firamono-nerd
-pavucontrol
 pipewire-pulse
 playerctl
 plocate
@@ -70,7 +69,6 @@ redshift
 reflector
 ripgrep
 rsync
-rtorrent
 rustup
 rxvt-unicode
 sl
@@ -90,7 +88,6 @@ thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
-tlp
 tmux
 tree
 ttf-dejavu
@@ -101,7 +98,6 @@ unrar
 unzip
 vim
 virt-manager
-virtualbox-host-modules-arch
 wasm-bindgen
 wasm-pack
 wget
