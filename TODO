@@ -1,6 +1,12 @@
 Test if creating gnupg and zsh folders manually is still necessary
 Figure out font stuff
 Fix all pacmanlist things
-Create pacmanlist verifier
 Check service enablement for
 - gnome-keyring-daemon
+Consider migrating user-level setup into the dotfiles repo
+- Idea: a script in dotfiles replaces most of user_setup.sh, turning dotfiles into
+  more of a "sudosteve-rice" repo (configs + the packages they need)
+- If so, aurlist.txt (and maybe the rice part of pacmanlist.txt: hyprland, waybar,
+  noctalia, ...) would move there along with checklists.sh and
+  hardware_specific_packages.txt; this repo keeps only base system packages
+- Until then the lists here are canonical; dotfiles has no copies (removed 2026-09-17)

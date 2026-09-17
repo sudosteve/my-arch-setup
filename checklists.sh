@@ -8,6 +8,10 @@
 #   - listed packages that no longer exist in the repos / AUR
 #   - packages that are in the wrong list (repo pkg in aurlist, AUR pkg in pacmanlist)
 #
+# Packages named in hardware_specific_packages.txt (microcode, GPU drivers, ...) are
+# installed per machine by setup.sh, so they are ignored when looking for unlisted
+# packages, and flagged if they end up in one of the lists.
+#
 # Usage: ./checklists.sh [--no-aur]   (--no-aur skips the AUR existence check, which needs network)
 
 set -euo pipefail
@@ -26,10 +30,17 @@ tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 
 # Strip comments/blank lines, sort, dedupe.
-clean() { sed -e 's/#.*//' -e 's/[[:space:]]//g' "$1" | grep -v '^$' | sort -u; }
+clean() { sed -e 's/#.*//' -e 's/[[:space:]]//g' "$1" | { grep -v '^$' || true; } | sort -u; }
 clean pacmanlist.txt > "$tmp/list_pacman"
 clean aurlist.txt    > "$tmp/list_aur"
 sort -u "$tmp/list_pacman" "$tmp/list_aur" > "$tmp/list_all"
+if [[ -f hardware_specific_packages.txt ]]; then
+    clean hardware_specific_packages.txt > "$tmp/hw"
+else
+    : > "$tmp/hw"
+fi
+# Anything listed or hardware-specific counts as accounted for.
+sort -u "$tmp/list_all" "$tmp/hw" > "$tmp/known"
 
 pacman -Qqen | sort -u > "$tmp/inst_native_explicit"   # explicit, from repos
 pacman -Qqem | sort -u > "$tmp/inst_foreign_explicit"  # explicit, AUR/local
@@ -49,8 +60,8 @@ print_list() {
 }
 
 # --- Installed explicitly but not in any list ---------------------------------
-comm -23 "$tmp/inst_native_explicit"  "$tmp/list_all" > "$tmp/missing_native"
-comm -23 "$tmp/inst_foreign_explicit" "$tmp/list_all" > "$tmp/missing_foreign"
+comm -23 "$tmp/inst_native_explicit"  "$tmp/known" > "$tmp/missing_native"
+comm -23 "$tmp/inst_foreign_explicit" "$tmp/known" > "$tmp/missing_foreign"
 
 section "Explicitly installed but NOT in pacmanlist.txt (repo packages):"
 print_list "$green" "+" "$tmp/missing_native"
@@ -81,6 +92,13 @@ section "In aurlist.txt but installed from the official repos (move to pacmanlis
 print_list "$yellow" "?" "$tmp/wrong_aur"
 section "In pacmanlist.txt but installed as foreign/AUR (move to aurlist.txt):"
 print_list "$yellow" "?" "$tmp/wrong_pacman"
+
+# --- Hardware-specific packages that leaked into the lists -------------------------
+comm -12 "$tmp/list_all" "$tmp/hw" > "$tmp/hw_listed"
+if [[ -s "$tmp/hw_listed" ]]; then
+    section "Hardware-specific packages that are in a list (remove them from the list):"
+    print_list "$yellow" "?" "$tmp/hw_listed"
+fi
 
 # --- Outdated: listed package no longer exists in repos / AUR -----------------
 : > "$tmp/gone_pacman"
